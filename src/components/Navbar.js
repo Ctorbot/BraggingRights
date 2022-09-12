@@ -2,7 +2,7 @@ import SiteIcon from './SiteIcon';
 
 export default function NavBar() {
     return (
-        <nav className="bg-primary opacity-80 w-full font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 shadow sm:items-baseline sticky top-0 z-50">
+        <nav className="bg-primary w-full font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6">
             <div className='container flex flex-wrap justify-between items-center mx-full max-w-none'>
                 <SiteIcon/>
                 <div className='mb-2 sm:mb-0 mr-auto'>
