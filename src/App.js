@@ -3,8 +3,8 @@ import NavBar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar ></NavBar>
+    <div sx={{ display: 'flex' }}>
+      <NavBar />
       <header className="App-header  bg-primary">
         <p className='text-center text-secondary'>
           Rooms
