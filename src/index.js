@@ -4,15 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { StyledEngineProvider } from '@mui/material/styles';
-import ColorModeContextProvider from './components/ColorModeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
-      <ColorModeContextProvider>
-        <App/>
-      </ColorModeContextProvider>
+      <App/>
     </StyledEngineProvider>
   </React.StrictMode>
 );
