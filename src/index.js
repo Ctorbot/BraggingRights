@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { StyledEngineProvider } from '@mui/material/styles';
+import ColorModeContextProvider from './components/ColorModeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App className="bg-primary"/>
+    <StyledEngineProvider injectFirst>
+      <ColorModeContextProvider>
+        <App/>
+      </ColorModeContextProvider>
+    </StyledEngineProvider>
   </React.StrictMode>
 );
 
