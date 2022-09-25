@@ -42,7 +42,7 @@ function App() {
           <Toolbar>
             <Grid container justifyContent="flex-start" alignItems={'stretch'}>
               <Typography>
-                Cool Logo Here
+                DATA PUGS
               </Typography>
               <Typography ml={2}>
                 Tournaments
