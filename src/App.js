@@ -4,6 +4,7 @@ import IconButton from "@mui/material/IconButton";
 import { ThemeProvider, createTheme, Grid, Typography, Toolbar, Card, Chip, AppBar } from '@mui/material'
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
+import CssBaseline from "@mui/material/CssBaseline";
 
 function App() {
   var [darkMode, setDarkMode] = React.useState(false);
@@ -18,7 +19,10 @@ function App() {
           },
           secondary: {
             main: '#8A4F7D',
-          }
+          },
+          background: {
+            default: darkMode ? "#121212" : "#fff"
+          }          
         },
         typography: {
           fontFamily: 'Dosis',
@@ -32,7 +36,8 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container>
+      <CssBaseline/>
+      <Grid container background-color='black'>
         <AppBar position='sticky' enableColorOnDark> 
           <Toolbar>
             <Grid container justifyContent="flex-start" alignItems={'stretch'}>
