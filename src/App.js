@@ -32,7 +32,7 @@ function App() {
           fontWeightMedium: 600,
           fontWeightBold: 700
         }
-      })
+      }),[lightMode]
   );
 
   const styles = {
