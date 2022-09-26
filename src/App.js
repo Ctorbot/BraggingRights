@@ -1,19 +1,20 @@
 import './App.css';
+import headerImage from './images/arcade.jpg'
 import * as React from "react";
 import IconButton from "@mui/material/IconButton";
-import { ThemeProvider, createTheme, Grid, Typography, Toolbar, Card, Chip, AppBar } from '@mui/material'
+import { ThemeProvider, createTheme, Grid, Typography, Toolbar, Card, Chip, AppBar, Paper } from '@mui/material'
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import CssBaseline from "@mui/material/CssBaseline";
 
 function App() {
-  var [darkMode, setDarkMode] = React.useState(false);
+  var [lightMode, setLightMode] = React.useState(false);
 
   var theme = React.useMemo(
     () =>
       createTheme({
         palette: {
-          mode: darkMode ? "dark" : "light",
+          mode: lightMode ? "light" : "dark",
           primary: {
             main: "#F55D3E"
           },
@@ -21,7 +22,7 @@ function App() {
             main: '#8A4F7D',
           },
           background: {
-            default: darkMode ? "#121212" : "#fff"
+            default: lightMode ? "#fff" : "#121212"
           }          
         },
         typography: {
@@ -34,11 +35,20 @@ function App() {
       })
   );
 
+  const styles = {
+    paperContainer: {
+        height: 350,
+        width: 'auto',
+        backgroundImage: `url(${headerImage})`,
+        backgroundSize: 'cover',
+        marginTop: -100
+    }
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline/>
-      <Grid container background-color='black'>
-        <AppBar position='sticky' enableColorOnDark> 
+        <AppBar position='sticky' enableColorOnDark style={{ margin: 10, width: '99%' }}> 
           <Toolbar>
             <Grid container justifyContent="flex-start" alignItems={'stretch'}>
               <Typography>
@@ -52,13 +62,14 @@ function App() {
               </Typography>
             </Grid>
             <Grid container justifyContent="flex-end">
-              <IconButton onClick={() => setDarkMode(!darkMode)} color="inherit">
-                {darkMode === true ? <Brightness7Icon /> : <Brightness4Icon />}
+              <IconButton onClick={() => setLightMode(!lightMode)} color="inherit">
+                {lightMode === true ? <Brightness4Icon /> : <Brightness7Icon />}
               </IconButton>
             </Grid>
           </Toolbar>
         </AppBar>
-      </Grid>
+      <Paper style={styles.paperContainer} square>
+      </Paper>
       <Grid container justifyContent="flex-start" alignItems="center" padding={2} spacing={2}>
           {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((gameRoomNumber) => (
                 <Grid xs={3} padding={2}>
