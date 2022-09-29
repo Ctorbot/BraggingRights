@@ -1,4 +1,3 @@
-import './App.css';
 import headerImage from './images/arcade.jpg'
 import * as React from "react";
 import IconButton from "@mui/material/IconButton";
