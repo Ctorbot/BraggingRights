@@ -47,7 +47,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline/>
-        <AppBar position='sticky' enableColorOnDark style={{ margin: 10, width: '99%' }}> 
+        <AppBar position='sticky' enableColorOnDark style={{ marginTop: 10 }}> 
           <Toolbar>
             <Grid container justifyContent="flex-start" alignItems={'stretch'}>
               <Typography>
