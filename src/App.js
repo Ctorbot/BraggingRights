@@ -41,6 +41,7 @@ function App() {
       <Routes>
         <Route path='/' element={<GameRoom />} />
         <Route path='/homerules' element={<HomeRules />} />
+        <Route path='/tournaments' element={<div>Fight me bro</div>} />
       </Routes> 
     </ThemeProvider>
   );
