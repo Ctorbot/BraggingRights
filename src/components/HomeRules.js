@@ -1,10 +1,9 @@
-import brlogo from '..//images/br-logo.png';
-import { AppBar, Toolbar, IconButton, Typography, Button } from '@mui/material';
-
 export default function HomeRules() {
     return (
         <div>
-            TEST
+            Put some rules here
         </div>
     )
 }
+
+// Home Rules include Game Name, Rule, Reference
