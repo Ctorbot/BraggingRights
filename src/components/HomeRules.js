@@ -5,5 +5,3 @@ export default function HomeRules() {
         </div>
     )
 }
-
-// Home Rules include Game Name, Rule, Reference
