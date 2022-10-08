@@ -1,6 +1,5 @@
 import * as React from "react";
-import { ThemeProvider, createTheme } from '@mui/material'
-import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider, createTheme, CssBaseline } from '@mui/material'
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import GameRoom from './components/GameRooms';
 import HomeRules from './components/HomeRules';

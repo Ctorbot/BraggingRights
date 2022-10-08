@@ -1,5 +1,5 @@
-import headerImage from '../images/arcade.jpg'
 import { Typography, Grid, Paper, Card, Chip } from '@mui/material';
+import headerImage from '../images/arcade.jpg'
 
 const styles = {
     paperContainer: {
